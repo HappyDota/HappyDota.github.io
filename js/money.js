@@ -51,9 +51,6 @@
                 animation: false
             }
         },
-        legend: {
-            data: ['radiant_win','base_line','dire_win']
-        },
         xAxis: {
             type: 'category',
             data: [],

@@ -98,7 +98,7 @@ d3.csv('data/hero_part.csv', data => {
     g.append('image')
         .attr('xlink:href', d => `http://cdn.dota2.com/apps/dota2/images/heroes/${subname(d.hero)}_full.png`)
         .attr('x', 0)
-        .attr('y', h-100)
+        .attr('y', h-80)
         .attr('width', xAxis.bandwidth());
     g.append('rect')
         .attr('x', 0)
@@ -106,6 +106,12 @@ d3.csv('data/hero_part.csv', data => {
         .attr('width', xAxis.bandwidth())
         .attr('height', d => Math.round(h-100 - yAxis(d.win_rate)))
         .attr('fill', `url(#${gradId})`);
+    g.append('text')
+        .attr('x', xAxis.bandwidth()/3)
+        .attr('y', d => Math.round(yAxis(d.win_rate))-10)
+        .text((d) => `${(Math.round(d.win_rate*1000)/10).toFixed(1)}%`)
+        .style('font-family', '\'Radiance\',\'arial\',sans-serif')
+        .attr('fill', '#c0c1c1')
     /****************************************
         pick ban
      ***************************************/

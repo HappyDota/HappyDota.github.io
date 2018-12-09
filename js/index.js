@@ -48,11 +48,11 @@ window.onload= function () {
         switch (event.key) {
             case 'ArrowDown':
                 event.preventDefault();
-                handle(-1);
+                handle(-1.5);
                 break;
             case 'ArrowUp':
                 event.preventDefault();
-                handle(1);
+                handle(1.5);
                 break;
         }
     });
@@ -74,7 +74,6 @@ function handle(delta) {
     else
         downButton.style.visibility = 'hidden';
     pageFlag = false;
-    console.log(page);
 
     setTimeout(() => {pageFlag = true}, 1000);
 }

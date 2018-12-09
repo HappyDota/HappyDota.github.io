@@ -137,7 +137,7 @@
 
 #hero-banpick-list-echart {
     width: 100%;
-    height: 80%;
+    height: 90%;
 }
 
 /*
@@ -167,7 +167,7 @@
 
 #team-echart {
     width: 100%;
-    height: 80%;
+    height: 90%;
 }
 
 /*
@@ -180,7 +180,7 @@
 
 #player-kda-echart {
     width: 100%;
-    height: 80%;
+    height: 90%;
 }
 
 #panel-player-pool {
@@ -190,7 +190,7 @@
 
 #player-pool-echart {
     width: 100%;
-    height: 80%;
+    height: 90%;
 }
 
 /*
@@ -203,7 +203,7 @@
 
 #map-echart {
     width: 100%;
-    height: 80%;
+    height: 100%;
 }
 
 /*
@@ -216,7 +216,7 @@
 
 #money-echart {
     width: 100%;
-    height: 80%;
+    height: 100%;
 }
 
 /*

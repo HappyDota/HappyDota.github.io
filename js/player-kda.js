@@ -64,22 +64,6 @@
         });
 
         option = {
-            title: [
-                {
-                    text: 'Player Diversity',
-                    x: 'center',
-                },
-                {
-                    text: 'upper: Q3 + 1.5 * IRQ \nlower: Q1 - 1.5 * IRQ',
-                    borderColor: '#999',
-                    borderWidth: 1,
-                    textStyle: {
-                        fontSize: 14
-                    },
-                    left: '10%',
-                    top: '90%'
-                }
-            ],
             tooltip: {
                 trigger: 'item',
                 axisPointer: {
@@ -112,9 +96,6 @@
             xAxis: {
                 type: 'value',
                 name: 'KDA',
-                splitArea: {
-                    show: true
-                },
                 axisLabel: {
                     fontSize: 18
                 },
@@ -146,7 +127,7 @@
                 color: '#c0c1c1',
                 fontFamily: 'Radiance',
                 fontSize: 18
-            },
+            }
         };
         if (option && typeof option === "object") {
             myChart.setOption(option, true);
