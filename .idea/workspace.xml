@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a6eb937-09b2-4558-b7a8-ae876c1ad5e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/css/panels.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/panels.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/drow-ranger.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/drow-ranger.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/io.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/io.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/player-pool.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/player-pool.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/team.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/team.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -60,8 +55,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="77" column="44" selection-start-line="77" selection-start-column="44" selection-end-line="77" selection-end-column="44" />
+            <state relative-caret-position="314">
+              <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -264,12 +259,12 @@
       <updated>1544217456845</updated>
       <workItem from="1544217458075" duration="23045000" />
       <workItem from="1544280646044" duration="41204000" />
-      <workItem from="1544379382017" duration="10938000" />
+      <workItem from="1544379382017" duration="11237000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75187000" />
+    <option name="totallyTimeSpent" value="75486000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -481,8 +476,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="77" column="44" selection-start-line="77" selection-start-column="44" selection-end-line="77" selection-end-column="44" />
+        <state relative-caret-position="314">
+          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
         </state>
       </provider>
     </entry>

@@ -1,10 +1,11 @@
 'use strict';
 
+let panels = document.getElementsByClassName("panel");
+let event = document.createEvent('Event');
+event.initEvent('reach', true, true);
+
 function setSize() {
-    let panels = document.getElementsByClassName("panel");
     const h = window.innerHeight;
-    let event = document.createEvent('Event');
-    event.initEvent('reach', true, true);
     for(let panel of panels) {
         panel.style.height = `${h}px`;
     }
@@ -17,9 +18,9 @@ downButton.style.visibility = 'hidden';
 let page = 0;
 let pageFlag = true;
 let oldDelta = 0;
+setSize();
 window.onload= function () {
-    setSize();
-
+    window.onresize = () => {setSize(); panels[page].scrollIntoView();};
     let wheel= function (event) {
         let delta=0;
         if(!event)//for ie
