@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a6eb937-09b2-4558-b7a8-ae876c1ad5e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/panels.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/panels.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/heroes.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/heroes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/money.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/money.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/player-kda.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/player-kda.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/player-pool.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/player-pool.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/team.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/team.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,7 +19,7 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="108">
               <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
             </state>
           </provider>
@@ -54,10 +46,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
+            <state relative-caret-position="1386">
               <caret line="77" column="43" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
             </state>
           </provider>
@@ -99,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="panels.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="panels.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/panels.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="92" column="18" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="18" />
+            <state relative-caret-position="-406">
+              <caret line="218" column="13" selection-start-line="218" selection-start-column="13" selection-end-line="218" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -165,10 +157,10 @@
         <option value="$PROJECT_DIR$/js/team.js" />
         <option value="$PROJECT_DIR$/js/player-kda.js" />
         <option value="$PROJECT_DIR$/js/money.js" />
-        <option value="$PROJECT_DIR$/css/panels.css" />
         <option value="$PROJECT_DIR$/css/index.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/index.js" />
+        <option value="$PROJECT_DIR$/css/panels.css" />
       </list>
     </option>
   </component>
@@ -279,12 +271,12 @@
       <updated>1544217456845</updated>
       <workItem from="1544217458075" duration="23045000" />
       <workItem from="1544280646044" duration="41204000" />
-      <workItem from="1544379382017" duration="15370000" />
+      <workItem from="1544379382017" duration="15554000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79619000" />
+    <option name="totallyTimeSpent" value="79803000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -476,20 +468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/panels.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="92" column="18" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-270">
@@ -499,8 +477,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
+        <state relative-caret-position="1386">
           <caret line="77" column="43" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/panels.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-406">
+          <caret line="218" column="13" selection-start-line="218" selection-start-column="13" selection-end-line="218" selection-end-column="13" />
         </state>
       </provider>
     </entry>
