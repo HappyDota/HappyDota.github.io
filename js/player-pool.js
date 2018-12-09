@@ -9,11 +9,10 @@
 
     d3.csv('data/player_hero_num.csv', function (data) {
         for (let i = 0; i<data.length; i++){
-            xAxisData.push(data[i].Name);
+            xAxisData.push(data[i].name);
             num.push(parseInt(data[i].hero_num))
         }
         myChart.showLoading();
-
         myChart.hideLoading();
 
         option = {
@@ -61,22 +60,13 @@
             dataZoom: [
                 {
                     show: true,
-                    start: 94,
-                    end: 100
+                    start: 0,
+                    end: 4
                 },
                 {
                     type: 'inside',
                     start: 94,
                     end: 100
-                },
-                {
-                    show: true,
-                    yAxisIndex: 0,
-                    filterMode: 'empty',
-                    width: 30,
-                    height: '80%',
-                    showDataShadow: false,
-                    left: '93%'
                 }
             ],
             series : [
