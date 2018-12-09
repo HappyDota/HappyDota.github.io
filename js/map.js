@@ -40,15 +40,6 @@
                 animation: false
             }
         },
-        legend: {
-            data: ['dire_win','base_line'],
-            selectedMode: false,
-            textStyle: {
-                color: '#c0c1c1',
-                fontFamily: 'Radiance',
-                fontSize: 18
-            }
-        },
         xAxis: {
             name: 'time/min',
             type: 'category',

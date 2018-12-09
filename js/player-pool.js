@@ -26,7 +26,6 @@
                 }
             },
             calculable : true,
-
             grid: {
                 top: '15%',
                 left: '10%',
