@@ -70,5 +70,5 @@ function handle(delta) {
     pageFlag = false;
     console.log(page);
 
-    setTimeout(() => {pageFlag = true}, 10);
+    setTimeout(() => {pageFlag = true}, 1000);
 }

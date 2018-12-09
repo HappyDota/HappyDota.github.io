@@ -70,11 +70,11 @@
     margin: auto;
     top: 80%;
     width: 200px;
-    color: #c0c1c1;
+    color: #ffffff;
     font-size: 60px;
     text-transform: uppercase;
-    text-shadow: 5px 5px 10px #000000;
-    font-family: 'Radiance-SemiBold','arial',sans-serif;
+    text-shadow: 0 0 10px #ffffff;
+    font-family: 'Radiance','arial',sans-serif;
 }
 
 #panel-hero-winnable {
@@ -151,11 +151,11 @@
     margin: auto;
     top: 80%;
     width: 520px;
-    color: #c0c1c1;
+    color: #ffffff;
     font-size: 60px;
     text-transform: uppercase;
-    text-shadow: 5px 5px 10px #000000;
-    font-family: 'Radiance-SemiBold','arial',sans-serif;
+    text-shadow: 0 0 10px #ffffff;
+    font-family: 'Radiance','arial',sans-serif;
 }
 
 #panel-team-list {
