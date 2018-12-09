@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!-- rAF polyfill -->
+    <script>
+        // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+        // http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
+
+        // requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
+
+        // MIT license
+
+        (function() {
+            let lastTime = 0;
+            let vendors = ['ms', 'moz', 'webkit', 'o'];
+            for(let x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+                window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+                window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame']
+                    || window[vendors[x]+'CancelRequestAnimationFrame'];
+            }
+
+            if (!window.requestAnimationFrame)
+                window.requestAnimationFrame = function(callback, element) {
+                    let currTime = new Date().getTime();
+                    let timeToCall = Math.max(0, 16 - (currTime - lastTime));
+                    let id = window.setTimeout(function() { callback(currTime + timeToCall); },
+                        timeToCall);
+                    lastTime = currTime + timeToCall;
+                    return id;
+                };
+
+            if (!window.cancelAnimationFrame)
+                window.cancelAnimationFrame = function(id) {
+                    clearTimeout(id);
+                };
+        }());
+    </script>
+    <!-- smooth scroll behavior polyfill -->
+    <script src="js/smoothscroll.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/panels.css">
+</head>
+<body>
+    <iframe src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/4/46/Music_default_ui_startup_01.mp3"
+            allow="autoplay"
+            id="music"></iframe>
+    <div id="container">
+        <div class="panel" id="panel-cover">
+            <div id="cover-content">
+                <div class="cover-banner cover-banner-left">
+                    <h1>Exploration and Analysis for</h1>
+                </div>
+                <div class="cover-banner cover-banner-right">
+                    <h1>The International 2018</h1>
+                </div>
+            </div>
+
+        </div>
+        <div class="panel" id="panel-introduction">
+            <h1 class="panel-header">Introduction</h1>
+        </div>
+        <!-- Hero -->
+        <div class="panel" id="panel-hero">
+            <div id="hero-banner">Heroes</div>
+        </div>
+        <div class="panel" id="panel-hero-winnable">
+        </div>
+        <div class="panel" id="panel-hero-winnable-list">
+            <h1 class="panel-header">Winnable Bar Chart</h1>
+            <div id="hero-winnable-list-d3"></div>
+        </div>
+        <div class="panel" id="panel-hero-banpick">
+        </div>
+        <div class="panel" id="panel-hero-banpick-list">
+            <h1 class="panel-header">Ban Pick Stack Bar Chart</h1>
+            <div id="hero-banpick-list-echart"></div>
+        </div>
+        <!-- Team -->
+        <div class="panel" id="panel-team">
+            <div id="team-banner">Heroes</div>
+        </div>
+        <div class="panel" id="panel-team-list">
+            <h1 class="panel-header">Team Bar Chart</h1>
+            <div id="team-echart"></div>
+        </div>
+        <!-- Player -->
+        <div class="panel" id="panel-player-kda">
+            <h1 class="panel-header">Who has the best kda?</h1>
+            <div id="player-kda-echart"></div>
+        </div>
+        <div class="panel" id="panel-player-pool">
+            <h1 class="panel-header">Which side would win?</h1>
+            <div id="player-pool-echart"></div>
+        </div>
+        <!-- Map -->
+        <div class="panel" id="panel-map">
+            <h1 class="panel-header">Which side would win?</h1>
+            <div id="map-echart"></div>
+        </div>
+        <!-- Money -->
+        <div class="panel" id="panel-money">
+            <h1 class="panel-header">Money</h1>
+            <div id="money-echart"></div>
+        </div>
+        <div class="panel" id="panel-end">
+            <div id="end-container" class="Content">
+                <div id="end-header">Thank you for your attention</div>
+                <div class="PrizePoolRow">
+                    <div class="PrizePoolCell">
+                        Team member
+                    </div>
+                </div>
+                <div class="PrizePoolRow">
+                    <div class="PrizePoolCell">
+                        Minghao Chen				<div class="PrizePoolPlace">first</div>
+                    </div>
+                    <div class="PrizePoolCell">
+                        Han Ding				<div class="PrizePoolPlace">second</div>
+                    </div>
+                </div>
+
+                <div class="PrizePoolRow">
+                    <div class="PrizePoolCell">
+                        Feihong Liu				<div class="PrizePoolPlace">third</div>
+                    </div>
+                    <div class="PrizePoolCell">
+                        Zilin Zhu				<div class="PrizePoolPlace">fourth</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="down-button">
+    </div>
+    <script src="js/index.js"></script>
+    <script src="js/heroes.js"></script>
+    <script src="js/team.js"></script>
+    <script src="js/player-pool.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/money.js"></script>
+    <script src="js/player-kda.js"></script>
+</body>
+</html>

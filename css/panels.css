@@ -1,0 +1,232 @@
+.panel {
+    width: 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.panel-header {
+    position: relative;
+    top: 1%;
+}
+
+/*
+    cover page
+ */
+
+#panel-cover {
+    background-image:
+            url(http://cdn.dota2.com/apps/dota2/images/international2018/overview/bg_overview_main.jpg);
+}
+
+#cover-content {
+    width: 1000px;
+    text-align: center;
+    font-family: 'Radiance','arial',sans-serif;
+    height: 155px;
+    padding-top: 60px;
+    margin: auto;
+}
+
+.cover-banner {
+    width: 336px;
+    height: 155px;
+}
+
+.cover-banner-right {
+    float: right;
+    margin-right: 30px;
+}
+
+.cover-banner-left {
+    float: left;
+    margin-left: 30px;
+}
+
+
+/*
+    introduction page
+ */
+
+#panel-introduction {
+    background-image:
+            url(http://cdn.dota2.com/apps/dota2/images/international2018/overview/bg_overview_main_how_to_watch.jpg);
+}
+
+#panel-end {
+    background-image: url('../img/bg_battlepass.jpg');
+}
+
+/*
+    heroes page
+ */
+
+#panel-hero {
+    background-image: url('../img/heroes.jpg');
+}
+
+#hero-banner {
+    color: #c0c1c1;
+    font-size: 60px;
+    width: 500px;
+    margin: auto;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 10px #000000;
+    font-family: 'Radiance-SemiBold','arial',sans-serif;
+    bottom: 100px;
+}
+
+#panel-hero-winnable {
+    background-image: url('../img/drow-ranger.jpg');
+    background-position: left;
+}
+
+#panel-hero-winnable-list {
+    background-image:
+            url(http://cdn.dota2.com/apps/dota2/images/international2018/overview/bg_overview_main_how_to_watch.jpg);
+}
+
+#hero-winnable-list-d3 {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
+
+/*
+    ban pick
+ */
+
+#panel-hero-banpick {
+    background-image: url('../img/io.jpg');
+    background-position: right;
+}
+
+#panel-hero-banpick-list {
+    background-image:
+            url(http://cdn.dota2.com/apps/dota2/images/international2018/overview/bg_overview_main_how_to_watch.jpg);
+}
+
+#hero-banpick-list-echart {
+    width: 100%;
+    height: 80%;
+}
+
+/*
+    team
+ */
+#panel-team {
+    background-image: url('../img/OG.jpg');
+    background-size: 80%, auto;
+}
+
+#panel-team-list {
+    background-image:
+            url(http://cdn.dota2.com/apps/dota2/images/international2018/overview/bg_overview_main_how_to_watch.jpg);
+}
+
+#team-echart {
+    width: 100%;
+    height: 80%;
+}
+
+/*
+    player
+ */
+#panel-player-kda {
+    background-image:
+            url(http://cdn.dota2.com/apps/dota2/images/international2018/overview/bg_overview_main_how_to_watch.jpg);
+}
+
+#player-kda-echart {
+    width: 100%;
+    height: 80%;
+}
+
+#panel-player-pool {
+    background-image:
+            url(http://cdn.dota2.com/apps/dota2/images/international2018/overview/bg_overview_main_how_to_watch.jpg);
+}
+
+#player-pool-echart {
+    width: 100%;
+    height: 80%;
+}
+
+/*
+    map
+ */
+#panel-map {
+    background-image:
+            url(http://cdn.dota2.com/apps/dota2/images/international2018/overview/bg_overview_main_how_to_watch.jpg);
+}
+
+#map-echart {
+    width: 100%;
+    height: 80%;
+}
+
+/*
+    money
+ */
+#panel-money {
+    background-image:
+            url(http://cdn.dota2.com/apps/dota2/images/international2018/overview/bg_overview_main_how_to_watch.jpg);
+}
+
+#money-echart {
+    width: 100%;
+    height: 80%;
+}
+
+/*
+    end page
+ */
+
+#end-container {
+    padding-top: 65px;
+}
+
+#end-header {
+    color: #c0c1c1;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Radiance-SemiBold','arial',sans-serif;
+    padding-bottom: 20px;
+}
+
+.PrizePoolRow {
+    margin-bottom: 38px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.LargePrizeCell {
+    font-size: 48px;
+    width: 400px;
+}
+
+.PrizePoolCell {
+    color: #c0c1c1;
+    display: inline-block;
+    width: 250px;
+    padding-right: 10px;
+    padding-left: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 24px;
+    text-shadow: 1px 1px 2px #000000;
+    font-family: 'Radiance-SemiBold','arial',sans-serif;
+    text-align: center;
+}
+
+.PrizePoolPlace {
+    color: #a39180;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Radiance-SemiBold','arial',sans-serif;
+    padding-top: 2px;
+}
