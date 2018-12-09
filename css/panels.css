@@ -79,7 +79,8 @@
 
 #panel-hero-winnable {
     background-image: url('../img/drow-ranger.jpg');
-    background-position: left;
+    background-position: left, center;
+    background-size: 100%, auto;
 }
 
 #hero-winnable-intro {
@@ -112,7 +113,8 @@
 
 #panel-hero-banpick {
     background-image: url('../img/io.jpg');
-    background-position: right;
+    background-position: right, center;
+    background-size: 100%, auto;
 }
 
 #hero-banpick-intro {

@@ -28,8 +28,8 @@
             calculable : true,
 
             grid: {
-                top: '12%',
-                left: '1%',
+                top: '15%',
+                left: '10%',
                 right: '10%',
                 containLabel: true
             },
@@ -61,12 +61,7 @@
                 {
                     show: true,
                     start: 0,
-                    end: 4
-                },
-                {
-                    type: 'inside',
-                    start: 94,
-                    end: 100
+                    end: 3
                 }
             ],
             series : [
