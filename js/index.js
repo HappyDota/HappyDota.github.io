@@ -13,6 +13,7 @@ downButton.style.visibility = 'hidden';
 
 let page = 0;
 let pageFlag = true;
+let oldDelta = 0;
 window.onload= function () {
     let wheel= function (event) {
         let delta=0;
@@ -23,9 +24,10 @@ window.onload= function () {
         }else if(event.detail){
             delta=-event.detail/3;
         }
-        if(delta){
+        if(Math.abs(delta) > 1 || Math.abs(delta-oldDelta) > 0.3){
             handle(delta);
         }
+        oldDelta = delta;
         if(event.preventDefault)
             event.preventDefault();
         event.returnValue=false;
@@ -36,15 +38,27 @@ window.onload= function () {
     window.onwheel=wheel;
     downButton.onclick = () => handle(-1);
     window.onbeforeunload = () => window.scrollTo(0, 0);
+    document.addEventListener('keydown', (event) => {
+        switch (event.key) {
+            case 'ArrowDown':
+                event.preventDefault();
+                handle(-1);
+                break;
+            case 'ArrowUp':
+                event.preventDefault();
+                handle(1);
+                break;
+        }
+    });
 };
 function handle(delta) {
     if(!pageFlag)
         return;
-    if (delta > 0 && page > 0) {//向上滚动
+    if (delta > 0.3 && page > 0) {//向上滚动
         page--;
         panels[page].scrollIntoView({ behavior: 'smooth' });
         panels[page].dispatchEvent(event);
-    } else if (delta<0 && page < panels.length-1){//向下滚动
+    } else if (delta< -0.3 && page < panels.length-1){//向下滚动
         page++;
         panels[page].scrollIntoView({ behavior: 'smooth'});
         panels[page].dispatchEvent(event);
@@ -54,5 +68,7 @@ function handle(delta) {
     else
         downButton.style.visibility = 'hidden';
     pageFlag = false;
-    setTimeout(() => {pageFlag = true}, 500);
+    console.log(page);
+
+    setTimeout(() => {pageFlag = true}, 10);
 }

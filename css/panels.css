@@ -66,19 +66,33 @@
 }
 
 #hero-banner {
+    position: relative;
+    margin: auto;
+    top: 80%;
+    width: 200px;
     color: #c0c1c1;
     font-size: 60px;
-    width: 500px;
-    margin: auto;
     text-transform: uppercase;
     text-shadow: 5px 5px 10px #000000;
     font-family: 'Radiance-SemiBold','arial',sans-serif;
-    bottom: 100px;
 }
 
 #panel-hero-winnable {
     background-image: url('../img/drow-ranger.jpg');
     background-position: left;
+}
+
+#hero-winnable-intro {
+    position: relative;
+    top: 30%;
+    left: 70%;
+    width: 400px;
+    text-shadow: 5px 5px 10px #000000;
+    font-family: 'Radiance','arial',sans-serif;
+    color: #a39180;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding-top: 2px;
 }
 
 #panel-hero-winnable-list {
@@ -101,6 +115,19 @@
     background-position: right;
 }
 
+#hero-banpick-intro {
+    position: relative;
+    top: 30%;
+    left: 10%;
+    width: 400px;
+    text-shadow: 5px 5px 10px #000000;
+    font-family: 'Radiance','arial',sans-serif;
+    color: #a39180;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding-top: 2px;
+}
+
 #panel-hero-banpick-list {
     background-image:
             url(http://cdn.dota2.com/apps/dota2/images/international2018/overview/bg_overview_main_how_to_watch.jpg);
@@ -117,6 +144,18 @@
 #panel-team {
     background-image: url('../img/OG.jpg');
     background-size: 80%, auto;
+}
+
+#team-banner {
+    position: relative;
+    margin: auto;
+    top: 80%;
+    width: 520px;
+    color: #c0c1c1;
+    font-size: 60px;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 10px #000000;
+    font-family: 'Radiance-SemiBold','arial',sans-serif;
 }
 
 #panel-team-list {
