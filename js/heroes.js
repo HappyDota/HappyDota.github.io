@@ -102,16 +102,26 @@ d3.csv('data/hero_part.csv', data => {
         .attr('width', xAxis.bandwidth());
     g.append('rect')
         .attr('x', 0)
-        .attr('y', d => Math.round(yAxis(d.win_rate)))
+        .attr('y', h-100)
         .attr('width', xAxis.bandwidth())
-        .attr('height', d => Math.round(h-100 - yAxis(d.win_rate)))
+        .attr('height', 0)
         .attr('fill', `url(#${gradId})`);
-    g.append('text')
-        .attr('x', xAxis.bandwidth()/3)
-        .attr('y', d => Math.round(yAxis(d.win_rate))-10)
-        .text((d) => `${(Math.round(d.win_rate*1000)/10).toFixed(1)}%`)
-        .style('font-family', '\'Radiance\',\'arial\',sans-serif')
-        .attr('fill', '#c0c1c1')
+    document.getElementById('panel-hero-winnable-list').addEventListener('reach', function (e) {
+        g.selectAll('rect')
+            .transition()
+            .duration(1500)
+            .attr('y', d => Math.round(yAxis(d.win_rate)))
+            .attr('height', d => Math.round(h-100 - yAxis(d.win_rate)))
+            .attr('fill', `url(#${gradId})`)
+            .on('end', () => {
+                g.append('text')
+                    .attr('x', xAxis.bandwidth()/3)
+                    .attr('y', d => Math.round(yAxis(d.win_rate))-10)
+                    .text((d) => `${(Math.round(d.win_rate*1000)/10).toFixed(1)}%`)
+                    .style('font-family', '\'Radiance\',\'arial\',sans-serif')
+                    .attr('fill', '#c0c1c1');
+            });
+    });
     /****************************************
         pick ban
      ***************************************/
