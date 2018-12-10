@@ -7,7 +7,11 @@
 
 .panel-header {
     position: relative;
-    top: 1%;
+    top: 2%;
+}
+
+.panel-subheader {
+    margin-top: 10px;
 }
 
 /*
@@ -190,7 +194,28 @@
 
 #player-pool-echart {
     width: 100%;
-    height: 90%;
+    height: 80%;
+}
+
+/*
+    Fact
+ */
+#panel-fact {
+    background-image: url('../img/juggernaut.jpg');
+    background-size: 100%, auto;
+    background-position: bottom;
+}
+
+#fact-banner {
+    position: relative;
+    top: 20%;
+    left: 50%;
+    width: 520px;
+    color: #ffffff;
+    font-size: 60px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #ffffff;
+    font-family: 'Radiance','arial',sans-serif;
 }
 
 /*

@@ -89,7 +89,7 @@ d3.csv('data/hero_part.csv', data => {
         .range([0, w])
         .paddingInner(.1);
 
-    let yAxis = d3.scaleLinear().domain([0, 1]).range([h-100, 0]);
+    let yAxis = d3.scaleLinear().domain([0, 0.8]).range([h-100, 0]);
 
     let gradId = addGradient(svg, 'hero-winnable-list');
     g = svg.selectAll('g').data(data.filter(d => (d.count > 20)).slice(0, 10)).enter()

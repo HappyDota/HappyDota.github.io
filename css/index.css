@@ -22,8 +22,8 @@ p {
     color: #a39180;
     font-size: 18px;
     text-align: center;
-    margin-top: 19px;
     line-height: 32px;
+    letter-spacing: 2px;
     text-shadow: 2px 2px 2px #000000;
 }
 
@@ -53,6 +53,6 @@ body {
 
 .shine {
     color: #ffffff;
-    text-shadow: 0 0 3px #ffffff;
+    text-shadow: 0 0 10px #ffffff;
     font-size: 32px;
 }
