@@ -52,6 +52,7 @@
             }
         },
         xAxis: {
+            name: 'money ratio',
             type: 'category',
             data: [],
             axisLabel: {
@@ -59,6 +60,7 @@
             },
         },
         yAxis: {
+            name: 'win rate',
             type: 'value',
             boundaryGap: [0, '100%'],
             splitLine: {

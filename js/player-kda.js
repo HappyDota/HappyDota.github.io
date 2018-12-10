@@ -74,6 +74,7 @@
                 bottom: '15%'
             },
             yAxis: {
+                name: 'player name',
                 type: 'category',
                 data: pdata.axisData,
                 boundaryGap: true,

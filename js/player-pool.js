@@ -34,6 +34,7 @@
             },
             xAxis: [
                 {
+                    name: 'player name',
                     type : 'category',
                     data : xAxisData,
                     axisLabel: {

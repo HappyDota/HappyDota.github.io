@@ -17,6 +17,7 @@
 
             option = {
                 xAxis: {
+                    name: 'team name',
                     data: xAxisData,
                     silent: false,
                     splitLine: {
@@ -41,6 +42,7 @@
                     }
                 },
                 yAxis: {
+                    name: 'win rate',
                     axisLabel: {
                         fontSize: 18
                     }
