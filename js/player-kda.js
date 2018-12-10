@@ -36,7 +36,7 @@
         }
         tmp.sort((a, b) => {
             if(d3.median(a.kda) === d3.median(b.kda)) {
-                return d3.mean(a.kda) >= d3.mean(b.kda) ? -1 : 1;
+                return d3.quantile(a.kda, 0.75) >= d3.quantile(b.kda, 0.75) ? -1 : 1;
             }
             return d3.median(a.kda) >= d3.median(b.kda) ? -1 : 1;
         });

@@ -57,11 +57,6 @@
             url(http://cdn.dota2.com/apps/dota2/images/international2018/overview/bg_overview_main_how_to_watch.jpg);
 }
 
-#panel-conclusion {
-    background-image:
-            url(http://cdn.dota2.com/apps/dota2/images/international2018/overview/bg_overview_main_how_to_watch.jpg);
-}
-
 #panel-end {
     background-image: url('../img/bg_battlepass.jpg');
 }
