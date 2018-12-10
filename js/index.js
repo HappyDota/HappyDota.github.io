@@ -25,7 +25,16 @@ if(window.addEventListener){
     window.addEventListener('DOMMouseScroll',(e) => {e.preventDefault();},false);
 }
 window.onwheel= (e) => {e.preventDefault();};
-document.addEventListener('keydown', (e) => {e.preventDefault();});
+document.addEventListener('keydown', (event) => {
+    switch (event.key) {
+        case 'ArrowDown':
+            event.preventDefault();
+            break;
+        case 'ArrowUp':
+            event.preventDefault();
+            break;
+    }
+});
 
 let downButton = document.getElementsByClassName("down-button")[0];
 downButton.style.visibility = 'hidden';
