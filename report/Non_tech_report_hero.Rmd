@@ -1,0 +1,70 @@
+---
+title: "Non_tech_report"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Hero
+```{r fig1, fig.height = 3, fig.width = 6, fig.align = "center",echo =FALSE,cache=FALSE, results=FALSE, warning=FALSE, comment=FALSE, warning=FALSE}
+library(ggplot2)
+df<-
+  read.csv('../data/hero_part.csv')
+order_<-
+  order(-df[,'win_rate'])
+selected_<-
+  df[order_,][1:15,]
+ggplot(selected_,
+       aes(x=reorder(hero,win_rate),y=win_rate))+
+  geom_bar(stat='identity',fill='#B44335')+
+  coord_flip()+
+  xlab('Heroes')+
+  ylab('Win Rates')
+```
+In general, hero Meepo wins always the games it plays, however, there are only 5 games Meepo is picked. Among more popular hero who picked more than 10 games, Draw Ranger is the one with the highest possibility of winning, followed by Nyx Assassin and Tusk.
+```{r fig2, fig.height = 3, fig.width = 6, fig.align = "center",echo =FALSE,cache=FALSE, results=FALSE, warning=FALSE, comment=FALSE, warning=FALSE}
+library(ggplot2)
+library(tidyr)
+df<-read.csv('../data/hero_part.csv')
+order_<-order(-(df[,'pick_rate']+df[,'ban_rate']))
+selected_<-df[order_,][1:15,]
+selected_['other_backup']=selected_['other_rate']
+colnames(selected_)<-
+  c('hero','win','win_rate','kda',
+    'count','pick','ban','other',
+    'a','b','c','attr','type')
+tidy_df<-
+  gather(selected_,key=type_of_value,value=value,'a','b','c')
+ggplot()+
+  geom_bar(aes(x=reorder(hero,-other),
+               y=value,
+               fill=type_of_value),
+           data=tidy_df,
+           stat="identity",
+           position= position_stack(reverse = TRUE))+
+  coord_flip()+
+  scale_fill_manual(name='Rate Type',
+                    values=c("#598307","#A83806","#434137"),
+                    labels=c("Pick Rate", "Ban Rate", "Neither Pick Nor Ban"))+
+  xlab('Heroes')
+```
+IO is the most popular hero who is picked or banned in more than 90% games while other heroes have at most 65% chance to be picked or banned, including Mirana and Chen.Meanwhile, lower the possibility to be picked, lower the possibility to be banned, but ban probability is always higher than the pick probability for the most popular heroes. 
+
+
+```{r fig3 ,fig.height = 3, fig.width = 6, fig.align = "center", echo =FALSE,cache=FALSE, results=FALSE, warning=FALSE, comment=FALSE, warning=FALSE}
+library(GGally)
+df<-read.csv('../data/hero_part.csv')
+new_df<-df[c('pick_rate','win_rate','ban_rate','kda')]
+ggpairs(new_df,mapping=ggplot2::aes(colour = df$attr))
+```
+
+```{r fig4 ,fig.height = 3, fig.width = 6, fig.align = "center", echo =FALSE,cache=FALSE, results=FALSE, warning=FALSE, comment=FALSE, warning=FALSE}
+library(GGally)
+df<-read.csv('../data/hero_part.csv')
+new_df<-df[c('pick_rate','win_rate','ban_rate','kda')]
+ggpairs(new_df,mapping=ggplot2::aes(colour = df$type))
+```
+
+Among the variables, ban rate and pick rate are most correlated variables suggesting that players tend to either pick or ban strong heroes.Also, KDA ratio and win rate are correlated somehow suggesting that more killing, more assisting and less death leads to winning. There is no difference bewteen heroes with different type or attribution.
