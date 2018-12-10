@@ -37,7 +37,7 @@ body {
     background: transparent;  /* optional: just make scrollbar invisible */
 }
 
-.down-button {
+#down-button {
     width: 3rem;
     height: 3rem;
     position: fixed;

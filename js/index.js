@@ -36,7 +36,7 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-let downButton = document.getElementsByClassName("down-button")[0];
+let downButton = document.getElementById("down-button");
 downButton.style.visibility = 'hidden';
 
 let page = 0;
@@ -79,10 +79,10 @@ window.onload= function () {
                 break;
         }
     });
+    downButton.onclick = () => changePage(-1.5);
 };
-function handle(delta) {
-    if(!pageFlag)
-        return;
+
+function changePage(delta) {
     if (delta > 0.3 && page > 0) {//向上滚动
         page--;
         panels[page].scrollIntoView({ behavior: 'smooth' });
@@ -96,6 +96,12 @@ function handle(delta) {
         downButton.style.visibility = 'visible';
     else
         downButton.style.visibility = 'hidden';
+}
+
+function handle(delta) {
+    if(!pageFlag)
+        return;
+    changePage(delta);
     pageFlag = false;
 
     setTimeout(() => {pageFlag = true}, 800);

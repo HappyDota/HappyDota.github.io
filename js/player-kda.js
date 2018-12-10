@@ -19,10 +19,10 @@
                 name_temp.push(temp_name);
                 temp_name = data[i].name;
                 temp = [];
-                temp.push(parseInt(data[i].kda));
+                temp.push(parseFloat(data[i].kda));
                 j=j+1;
             } else{
-                temp.push(parseInt(data[i].kda));
+                temp.push(parseFloat(data[i].kda));
                 if (i === data.length-1){
                     kda_temp.push(temp);
                     name_temp.push(temp_name);
@@ -60,7 +60,7 @@
                     borderColor: '#c0c1c1'
                 }
             }
-        })
+        });
         option = {
             tooltip: {
                 trigger: 'item',
@@ -111,11 +111,11 @@
                     tooltip: {
                         formatter: function (param, index) {
                             return [
-                                'upper: ' + param.data.value[5],
-                                'Q3: ' + param.data.value[4],
-                                'median: ' + param.data.value[3],
-                                'Q1: ' + param.data.value[2],
-                                'lower: ' + param.data.value[1]
+                                'upper: ' + param.data.value[5].toFixed(1),
+                                'Q3: ' + param.data.value[4].toFixed(1),
+                                'median: ' + param.data.value[3].toFixed(1),
+                                'Q1: ' + param.data.value[2].toFixed(1),
+                                'lower: ' + param.data.value[1].toFixed(1)
                             ].join('<br/>')
                         }
                     }
@@ -123,7 +123,13 @@
                 {
                     name: 'outlier',
                     type: 'scatter',
-                    data: pdata.outliers
+                    data: pdata.outliers,
+                    tooltip: {
+                        formatter: function (param, index) {
+                            console.log(param);
+                            return param.data.value;
+                        }
+                    }
                 }
             ],
             textStyle: {
