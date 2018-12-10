@@ -127,7 +127,12 @@
                     tooltip: {
                         formatter: function (param, index) {
                             console.log(param);
-                            return param.data.value;
+                            return `<span style="display:inline-block;
+                                         margin-right:5px;
+                                         border-radius:10px;
+                                         width:10px;
+                                         height:10px;
+                                         background-color:rgb(131, 58, 47);"></span> ${param.data[0]}`;
                         }
                     }
                 }
