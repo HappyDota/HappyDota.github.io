@@ -45,7 +45,7 @@ function subname(name) {
 
 let svg;
 let g;
-
+let animation = true;
 function addGradient(svg, name) {
     let id = `gradient-${name}`;
     let defs = svg.append('defs');
@@ -107,6 +107,9 @@ d3.csv('data/hero_part.csv', data => {
         .attr('height', 0)
         .attr('fill', `url(#${gradId})`);
     document.getElementById('panel-hero-winnable-list').addEventListener('reach', function (e) {
+        if(!animation)
+            return;
+        animation = false;
         g.selectAll('rect')
             .transition()
             .duration(1500)
