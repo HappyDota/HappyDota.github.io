@@ -1,6 +1,6 @@
 ---
 title: "Non_tech_report"
-output: html_document
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
@@ -68,3 +68,78 @@ ggpairs(new_df,mapping=ggplot2::aes(colour = df$type))
 ```
 
 Among the variables, ban rate and pick rate are most correlated variables suggesting that players tend to either pick or ban strong heroes.Also, KDA ratio and win rate are correlated somehow suggesting that more killing, more assisting and less death leads to winning. There is no difference bewteen heroes with different type or attribution.
+##players and teams
+
+In this part, we are going to use win rate to measure performance of team, the number of players used in TI8 to measure hero pool of players and draw a boxplot to analyze consistency of players. 
+```{r,echo= FALSE, cache=FALSE, results=FALSE, warning=FALSE, comment=FALSE, warning=FALSE, message=FALSE}
+library(tidyverse)
+rate = read.csv('../data/win_rate.csv',header = TRUE,encoding = 'UTF-8')
+rate$X =NULL
+names(rate) = c('team_tag','win_rate')
+rate %>% mutate(team_tag = fct_reorder(team_tag,desc(win_rate))) %>% 
+  ggplot(aes(x = team_tag,y = win_rate)) + geom_bar(stat = "identity",fill = '#A83806') + 
+  xlim('EG', 'OG', 'Liquid','PSG.LGD','ThunderP','VP','TNC','TSpirit','Serenity','Fnatic') +
+  xlab('Team Name') + ylab('Win Rate') + ggtitle("10 Teams with Highest Win Rate")
+```
+According to win rate bar chart, EG’s win rate is the highest. However, EG did not win the championship. We guess it is because EG entered loser group and beat too many weak teams but did not winner group finally. OG’s win rate is the second and it won the championship, as expected.
+```{r,echo= FALSE, cache=FALSE, results=FALSE, warning=FALSE, comment=FALSE, warning=FALSE, message=FALSE}
+library(tidyverse)
+kda = read.csv("../data/players_kda.csv",header = TRUE,encoding = 'UTF-8')
+kda$X.U.FEFF.index = NULL
+ggplot(kda,aes(x = name,y = kda)) + geom_boxplot(color = '#A83806') + 
+  xlim('ARMEL','Moo','430','YawaR','rtz','Limmp','No[o]ne-','Dark','Raven','Resolut1on') + 
+  xlab('Player Name') + ylab('KDA') + ggtitle('10 Players with Highest KDA Median') + 
+  coord_flip()
+```
+In analysis of consistency, players Resolut1on, Raven and Dark not only make a good showing but also have high consistency, since their KDA are very high and they did not have any outliers. By contrast, No[o]ne was not consistent because he had three outliers.
+```{r,echo=FALSE, cache=FALSE, results=FALSE, warning=FALSE, comment=FALSE, warning=FALSE, message=FALSE}
+library(tidyverse)
+num = read.csv('../data/player_hero_num.csv',header = TRUE,encoding = 'UTF-8')
+names(num)=c('name','team_tag','hero_num')
+num %>% ggplot(aes(x = name,y = hero_num)) + geom_bar(stat = "identity",fill = '#A83806') + 
+  xlim('33', 'Ceb', 'zai','busen','JerAx','CCnC','Archangel','MidOne','nongrata`','EternaLEnVy') +
+  xlab('Player Name') + ylab('Number of Heroes') + ggtitle("Depth of the Hero Pool for Top 10 Players")
+
+```
+In diversity of players, '33'’s hero pool is the deepest and the number of heroes he played reached 24. However, it seems that his teammates hold him back, so his team is just a second-rate team. The following are Ceb, zai and busen.
+##interesting fact
+
+In this part we mainly analyze two things: the relationship between time and win rate of dire, the relationship between gold advantage and win rates of both dire and radiant.
+
+Time and win rate of dire:
+
+We divide games into groups by the duration and calculate the dire’s win rate in each groups.([*happydota*](https://happydota.github.io/)).
+```{r fig.align = "center",echo =FALSE,cache=FALSE, results=FALSE, warning=FALSE, comment=FALSE, warning=FALSE, message=FALSE}
+library(tidyverse)
+df = read.csv("/Users/chenminghao/Desktop/5702EDAV/final_project/time_dire_win.csv")
+g <- ggplot(data=df, aes(x=time, y=dire_win)) +
+  geom_line(color = "#A83806") +
+  geom_point(color = "#A83806")+
+  ggtitle("Will dire win?")+
+  ylab("dire win rate")+
+  theme(plot.title = element_text(size=22,hjust = 0.5))
+g
+```
+Surprisingly, we could see obviously increasing trend for dire's win rate.  This result may be caused by the order of ban and pick, difference of the map or player hobbits. But it is sure that the longer the game becomes, the more likely the dire is to win.  
+
+
+Gold advantage and win rates of both dire and radiant:
+
+We define the gold advantage at one moment to be ratio of two team’s total gold at that moment. We calculate the gold advantage for each of the two teams per minute. Then calculate the team winning rate under each gold advantage. 
+```{r fig.align = "center",echo =FALSE,cache=FALSE, results=FALSE, warning=FALSE, comment=FALSE, warning=FALSE, message=FALSE}
+df1 = read.csv("/Users/chenminghao/Desktop/5702EDAV/final_project/win_money.csv")
+df2 = read.csv("/Users/chenminghao/Desktop/5702EDAV/final_project/dire_win_money.csv")
+df = merge(df1, df2, by="advance")
+df = df %>% select('advance','dire_win_rate',"win_rate")
+colnames(df) <- c('advance','dire','radiant')
+df <- gather(df, key ='team', value = 'win_rate', dire, radiant)
+g <- ggplot(df, aes(x = advance,y=win_rate, group = team, color = team)) +
+  geom_line()+
+  scale_color_manual(values=c('#A83806','#598307'))+
+  ggtitle("How importan is money?")  +
+  ylab("win rate") +
+  theme(plot.title = element_text(size=22,hjust = 0.5))
+g
+```
+
+In conclusion, we find that dire appears to be more winnable in most case but when the gold advantages are some extreme values.
