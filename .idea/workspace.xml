@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a6eb937-09b2-4558-b7a8-ae876c1ad5e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/js/player-kda.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/player-kda.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="175" column="11" selection-start-line="175" selection-start-column="11" selection-end-line="175" selection-end-column="11" />
+            <state relative-caret-position="458">
+              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
             </state>
           </provider>
         </entry>
@@ -61,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="player-kda.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="player-kda.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/player-kda.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="2286">
               <caret line="127" column="53" selection-start-line="127" selection-start-column="53" selection-end-line="127" selection-end-column="53" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
@@ -156,10 +156,10 @@
         <option value="$PROJECT_DIR$/a.html" />
         <option value="$PROJECT_DIR$/js/map.js" />
         <option value="$PROJECT_DIR$/css/index.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/css/panels.css" />
         <option value="$PROJECT_DIR$/js/player-kda.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -272,12 +272,12 @@
       <workItem from="1544217458075" duration="23045000" />
       <workItem from="1544280646044" duration="41204000" />
       <workItem from="1544379382017" duration="16075000" />
-      <workItem from="1544401990096" duration="17015000" />
+      <workItem from="1544401990096" duration="17265000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97339000" />
+    <option name="totallyTimeSpent" value="97589000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -562,13 +562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="175" column="11" selection-start-line="175" selection-start-column="11" selection-end-line="175" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/panels.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1000">
@@ -606,11 +599,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/player-kda.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="2286">
           <caret line="127" column="53" selection-start-line="127" selection-start-column="53" selection-end-line="127" selection-end-column="53" />
           <folding>
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
