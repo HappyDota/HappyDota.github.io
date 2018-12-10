@@ -464,8 +464,8 @@ Because there is so much data for TI8, we could only present a few aspects const
 
 ##lessons learned
 
-1. We learned to use many tools ,like Echarts.js, JS technology, R, D3.
+1.We learned to use many tools ,like Echarts.js, JS technology, R, D3.
 
-2. Data collection and preprocessing is of vital importance, and they usually take a lot of time.
+2.Data collection and preprocessing is of vital importance, and they usually take a lot of time.
 
-3. When we are visualizing data, we should consider the actual needs. As for our projects, our main concern is the players' need, what they are interested in.
+3.When we are visualizing data, we should consider the actual needs. As for our projects, our main concern is the players' need, what they are interested in.
