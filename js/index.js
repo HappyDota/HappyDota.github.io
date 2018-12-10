@@ -21,6 +21,11 @@ function setSize() {
     }
 }
 
+if(window.addEventListener){
+    window.addEventListener('DOMMouseScroll',(e) => {e.preventDefault();},false);
+}
+window.onwheel= (e) => {e.preventDefault();};
+document.addEventListener('keydown', (e) => {e.preventDefault();});
 
 let downButton = document.getElementsByClassName("down-button")[0];
 downButton.style.visibility = 'hidden';
@@ -52,7 +57,6 @@ window.onload= function () {
         window.addEventListener('DOMMouseScroll',wheel,false);
     }
     window.onwheel=wheel;
-    downButton.onclick = () => handle(-1);
     window.onbeforeunload = () => window.scrollTo(0, 0);
     document.addEventListener('keydown', (event) => {
         switch (event.key) {
@@ -85,5 +89,5 @@ function handle(delta) {
         downButton.style.visibility = 'hidden';
     pageFlag = false;
 
-    setTimeout(() => {pageFlag = true}, 1000);
+    setTimeout(() => {pageFlag = true}, 800);
 }
