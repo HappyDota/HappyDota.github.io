@@ -52,9 +52,27 @@
     introduction page
  */
 
-#panel-introduction {
+#panel-intro {
     background-image:
             url(http://cdn.dota2.com/apps/dota2/images/international2018/overview/bg_overview_main_how_to_watch.jpg);
+}
+
+#intro {
+    position: relative;
+    top: 25%;
+    margin: auto;
+    width: 65%;
+    color: #a39180;
+    font-size: 25px;
+    line-height: 32px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px #000000;
+    text-align: center;
+}
+
+#dota-logo {
+    height: 25px;
+    vertical-align: middle;
 }
 
 #panel-end {

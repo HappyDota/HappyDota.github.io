@@ -42,7 +42,6 @@
         });
 
         for (let i=0; i<10; i++){
-            console.log(tmp[i]);
             kda.push(tmp[i].kda);
             name.push(tmp[i].name);
         }
